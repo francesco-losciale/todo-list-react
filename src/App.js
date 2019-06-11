@@ -3,21 +3,13 @@ import logo from './logo.svg';
 import './App.css';
 import { throwStatement } from '@babel/types';
 
-class InputForm extends React.Component {
-
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (
-      <form>
-        <input type="text" value={this.props.value} onChange={this.props.onChange} />
-        <input type="submit" value="Add Item" onClick={this.props.onClick}/>
-      </form>
-    );
-  }
-
+function InputForm(props) {
+  return (
+    <form>
+      <input type="text" value={props.value} onChange={props.onChange} />
+      <input type="submit" value="Add Item" onClick={props.onClick}/>
+    </form>
+  );
 }
 
 function OutputList(props) {
